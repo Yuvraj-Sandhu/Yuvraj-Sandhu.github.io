@@ -1,0 +1,208 @@
+---
+import profile from "../../../public/profile.png"
+import MainLayout from "../layouts/main-layout.astro";
+
+---
+
+<MainLayout title={'Yuvraj'}>
+	<div class="relative mx-12 gap-12 xl:gap-36">
+		<h1 class="text-4xl my-2 xl:mx-64">About Me</h1>
+		<div class="row">
+			<div class="column left my-6">
+				<div class="xl:mx-64 xl:w-8/12 w-full">
+
+					<p>Hi There!</p>
+					<p>
+						I am Yuvraj Singh Sandhu, a Computer Science student at McMaster University in my third year. 
+						Throughout my academic journey, I have had the privilege of gaining invaluable insights into 
+						the world of computer science. My coursework has equipped me with the knowledge and skills 
+						needed to tackle real-world challenges. I thrive in an academic environment that encourages 
+						critical thinking and analytical reasoning.
+					</p>
+					<p>
+						One of my defining qualities is my ability to approach complex problems with a clear and 
+						logical mindset. I relish the challenge of breaking down intricate issues into manageable 
+						components and finding innovative solutions. As a Computer Science student, I've had the 
+						opportunity to apply my problem-solving skills in various projects and assignments, and 
+						I am always excited to take on new challenges.
+					</p>
+					<p>
+						Currently, I am looking for Co-op positions starting in May 2024.
+					</p>
+					<p>
+						Here are a few of the technologies I use to build projects:
+					</p>
+
+				</div>
+				<div class="skills xl:mx-80 xl:w-8/12 w-full my-6">
+					{/* skills */}
+					<ul class="skills-list">
+						<li>
+							<div class="skill-svg">
+								<img
+                    				src={`../../../public/Java.svg`}
+                    				alt="JavaImg"
+                  				/>
+							</div>
+							<p class="skill-name">Java</p>
+						</li>
+						<li>
+							<div class="skill-svg">
+								<img
+                    				src={`../../../public/Python.svg`}
+                    				alt="PythonImg"
+                  				/>
+							</div>
+							<p class="skill-name">Python</p>
+						</li>
+						<li>
+							<div class="skill-svg">
+								<img
+                    				src={`../../../public/MySQL.svg`}
+                    				alt="SqlImg"
+                  				/>
+							</div>
+							<p class="skill-name">MySQL</p>
+						</li>
+						<li>
+							<div class="skill-svg">
+								<img
+                    				src={`../../../public/JavaScript.svg`}
+                    				alt="jsImg"
+                  				/>
+							</div>
+							<p class="skill-name">JavaScript</p>
+						</li>
+						<li>
+							<div class="skill-svg">
+								<img
+                    				src={`../../../public/html.svg`}
+                    				alt="htmlImg"
+                  				/>
+							</div>
+							<p class="skill-name">HTML</p>
+						</li>
+						<li>
+							<div class="skill-svg">
+								<img
+                    				src={`../../../public/css.svg`}
+                    				alt="jsImg"
+                  				/>
+							</div>
+							<p class="skill-name">CSS</p>
+						</li>
+					</ul>
+				</div>
+			</div>
+		
+			<div class="column right">
+			
+				<img id="pic" src={'../../../public/profile.png'} alt="Profile Picture" width="300" height="400" class="my-6"/>
+				<svg class="absolute overflow-visible">
+					<defs>
+						<linearGradient
+							id="gradient"
+							x1="0%"
+							y1="0%"
+							x2="100%"
+							y2="100%"
+						>
+							<stop offset="0%" style={{stopColor: "#3B33ff", stopOpacity:1}}></stop> {/* #DC3A2B */} 
+							<stop offset="100%" style={{stopColor: "#22D3EE", stopOpacity:1}}></stop> {/* #E18510 */}
+						</linearGradient>
+					</defs>
+					<path
+						id="border-path"
+						fill="none"
+						stroke="url(#gradient)"
+						stroke-width="2"
+					>
+					</path>
+				</svg>
+			</div>
+		</div>
+	</div>
+</MainLayout>
+
+<style>
+    #border-path {
+        animation: draw 1s forwards 1s ease-out;
+    }
+    @keyframes draw {
+        to{
+            stroke-dashoffset: 0;
+        }
+    }
+	.column {
+		float:left;
+	}
+	.left {
+		width:60%;
+		@media (max-width: 768px) {
+			width: 105%;
+		}
+	}
+	.right {
+		width:40%;
+		padding-left: 50px;
+		@media (max-width: 768px) {
+			width: 100%;
+		}
+	}
+	.row:after {
+		content: "";
+		display: table;
+		clear:both;
+	}
+	p {
+		margin-bottom: 15px;
+	}
+	ul.skills-list {
+		align-items: center;
+		margin-left: auto;
+    	margin-right: auto;
+    	justify-content: center;
+    	display: flex;
+    	list-style: none;
+    	margin: 15px 0px 0px 0px;
+    	padding: 0px;
+    	flex-wrap: wrap;
+	
+	}
+    li {
+      	overflow: hidden;
+      	display: flex;
+      	align-items: center;
+      	position: relative;
+      	border-radius: 0.75rem;
+      	border: #e2e8f0;
+		border-style: solid;
+		padding: 0px 15px 0px 15px;
+      	margin: 0.5rem;
+	}
+    .skill-svg {
+        width: 25px;
+        margin-right: 25px;
+    }
+    .skill-name {
+        margin-top: 15px;
+    }
+</style>
+
+<script>
+    function updatePath() {
+        const textMain = document.querySelector("#pic") as HTMLElement
+        const path = document.querySelector("#border-path") as SVGPathElement
+        
+        if (textMain && path) {
+            path.setAttribute("d", `M24,-24 V${textMain.offsetHeight * 0 -10} H${textMain.offsetWidth + 14} v${14+(-1 * textMain.offsetHeight)} h${-14}`)
+            const pathLength = path.getTotalLength()
+            
+            path.style.strokeDasharray = pathLength.toString()
+            path.style.strokeDashoffset = pathLength.toString()
+        }
+    }
+
+    window.addEventListener("DOMContentLoaded", updatePath)
+    window.addEventListener("resize", updatePath)
+</script>

@@ -1,0 +1,66 @@
+---
+import MainLayout from "../layouts/main-layout.astro";
+
+---
+
+<MainLayout title={'Yuvraj'}>
+    <div class="relative mx-12 flex items-center justify-center gap-12 xl:flex-row xl:gap-36">
+        <div class="w-full xl:w-2/3">
+            <h1 class="text-4xl">Contact Me</h1>
+            <div class="contact flex-row">
+                <span id="h1" class="text-4xl">Want to work together, or get in touch?<br/></span>
+                <span id="h2">email - yuvrajsandhu2502@gmail.com</span><br/>
+                <span id="h2">phone - +1 249-876-0397</span>
+                <div class="flex items-center justify-center my-6">
+                    <a id="link" href="mailto:yuvrajsandhu2502@gmail.com"><span id="hello">Say Hello</span></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</MainLayout>
+
+
+<style>
+    .contact {
+        
+        text-align: center;
+        margin: 40px auto 100px;
+
+        @media (max-width:720px) {
+            margin: 30px auto 100px;
+        }
+    }
+    #h1 {
+        line-height: 3;
+
+        @media (max-width:720px) {
+            line-height: 2;
+            font-size: x-large;
+        }
+    }
+    #h2 {
+        color: #676f85;
+        line-height: 2;
+    }
+    #link {
+        overflow: hidden;
+      	display: flex;
+      	align-items: center;
+      	position: relative;
+      	border-radius: 0.25rem;
+      	border: #3b83f6;
+		border-style: solid;
+        border-width: 1px;
+        font-size: medium;
+		padding: 1.25rem 1.75rem;
+        line-height: 1;
+        &:hover {
+            background-color: rgba(59, 131, 246, 0.1);
+        }
+    }
+    #hello {
+        color: #3b83f6
+    }
+
+
+</style>

@@ -1,0 +1,35 @@
+---
+const {title} = Astro.props
+import "@fontsource/josefin-sans"
+import Nav from "../pages/components/Nav"
+---
+
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="author" content="Yuvraj Singh Sandhu"/>
+        <meta
+            name="description"
+            content="Hello, I'm Yuvraj Singh Sandhu, a passionate and dedicated third-year Computer Science student at McMaster Univrsity."
+        />
+        <meta title={title} />
+        <title>{title}</title>
+        <link rel="icon" href="../../../public/profile2.png">
+    </head>
+    <body class=""> 
+        <Nav client:load />
+    </body>
+</html>
+<main>
+    <slot />
+    <footer>
+        <div></div>
+    </footer>
+</main>
+
+<style>
+    body{
+        font-family: 'Atkinson Hyperlegible', sans-serif;
+    }
+</style>
