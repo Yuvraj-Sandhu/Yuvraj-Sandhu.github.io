@@ -195,7 +195,7 @@ import MainLayout from "../layouts/main-layout.astro";
         const path = document.querySelector("#border-path") as SVGPathElement
         
         if (textMain && path) {
-            path.setAttribute("d", `M24,-24 V${textMain.offsetHeight * 0 -10} H${textMain.offsetWidth + 14} v${14+(-1 * textMain.offsetHeight)} h${-14}`)
+            path.setAttribute("d", `M24,-24 V${textMain.offsetHeight * 0 -10} H${textMain.offsetWidth + 14} v${-326} h${-14}`)
             const pathLength = path.getTotalLength()
             
             path.style.strokeDasharray = pathLength.toString()
