@@ -61,7 +61,7 @@ export default function Nav(){
     return(
         <nav className="relative mx-8 mb-24 flex justify-between items-center pt-8 pb-6 font-medium md:mx-8 lg:mx-16">
             <svg 
-                className="absolute bottom-0 xl:left-1/4 xl:translate-x-1/3 left-1/2 -translate-x-1/2"
+                className="absolute bottom-0 xl:-ml-40 left-1/2 -translate-x-1/2" //xl:left-1/4 xl:translate-x-1/3
                 width="250" 
                 height="4"
                 viewBox="0 0 250 4"
