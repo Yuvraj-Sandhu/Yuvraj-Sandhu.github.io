@@ -6,7 +6,7 @@ import MainLayout from "../layouts/main-layout.astro";
 
 <MainLayout title={'Yuvraj'}>
 	<div class="relative mx-12 gap-12 xl:gap-36">
-		<h1 class="text-4xl my-2 xl:mx-64">About Me</h1>
+		<h1 class="lg:text-[3.5rem] text-[2.5rem] my-2 xl:mx-56">About Me</h1>
 		<div class="row">
 			<div class="column left my-6">
 				<div class="xl:mx-64 xl:w-8/12 w-full">
@@ -27,7 +27,7 @@ import MainLayout from "../layouts/main-layout.astro";
 						I am always excited to take on new challenges.
 					</p>
 					<p>
-						Currently, I am looking for entry-level Software Engineer positions starting in May 2025.
+						Currently, I am looking for entry-level Software Engineer positions.
 					</p>
 					<p>
 						Here are a few of the technologies I use to build projects:
@@ -40,15 +40,6 @@ import MainLayout from "../layouts/main-layout.astro";
 						<li>
 							<div class="skill-svg">
 								<img
-                    				src={`../../Java.svg`}
-                    				alt="JavaImg"
-                  				/>
-							</div>
-							<p class="skill-name">Java</p>
-						</li>
-						<li>
-							<div class="skill-svg">
-								<img
                     				src={`../../Python.svg`}
                     				alt="PythonImg"
                   				/>
@@ -58,20 +49,56 @@ import MainLayout from "../layouts/main-layout.astro";
 						<li>
 							<div class="skill-svg">
 								<img
-                    				src={`../../MySQL.svg`}
-                    				alt="SqlImg"
-                  				/>
-							</div>
-							<p class="skill-name">MySQL</p>
-						</li>
-						<li>
-							<div class="skill-svg">
-								<img
                     				src={`../../JavaScript.svg`}
                     				alt="jsImg"
                   				/>
 							</div>
 							<p class="skill-name">JavaScript</p>
+						</li>
+						<li>
+							<div class="skill-svg">
+								<img
+                    				src={`../../Java.svg`}
+                    				alt="JavaImg"
+                  				/>
+							</div>
+							<p class="skill-name">Java</p>
+						</li>
+						<li>
+							<div class="skill-svg">
+								<img
+                    				src={`../../pytorch.svg`}
+                    				alt="torchImg"
+                  				/>
+							</div>
+							<p class="skill-name">PyTorch</p>
+						</li>
+						<li>
+							<div class="skill-svg">
+								<img
+                    				src={`../../mongodb.svg`}
+                    				alt="mongodbImg"
+                  				/>
+							</div>
+							<p class="skill-name">MongoDB</p>
+						</li>
+						<li>
+							<div class="skill-svg">
+								<img
+                    				src={`../../cursor.svg`}
+                    				alt="cursorImg"
+                  				/>
+							</div>
+							<p class="skill-name">Cursor</p>
+						</li>
+						<li>
+							<div class="skill-svg">
+								<img
+                    				src={`../../svelte.svg`}
+                    				alt="svelteImg"
+                  				/>
+							</div>
+							<p class="skill-name">Svelte</p>
 						</li>
 						<li>
 							<div class="skill-svg">
@@ -90,6 +117,15 @@ import MainLayout from "../layouts/main-layout.astro";
                   				/>
 							</div>
 							<p class="skill-name">CSS</p>
+						</li>
+						<li>
+							<div class="skill-svg">
+								<img
+                    				src={`../../MySQL.svg`}
+                    				alt="SqlImg"
+                  				/>
+							</div>
+							<p class="skill-name">MySQL</p>
 						</li>
 					</ul>
 				</div>
@@ -126,6 +162,8 @@ import MainLayout from "../layouts/main-layout.astro";
 
 <style>
     #border-path {
+        position: relative;
+        z-index: 1;
         animation: draw 1s forwards 1s ease-out;
     }
     @keyframes draw {
@@ -168,10 +206,9 @@ import MainLayout from "../layouts/main-layout.astro";
     	justify-content: center;
     	display: flex;
     	list-style: none;
-    	margin: 15px 0px 0px 0px;
+    	margin: 15px 10px 0px 0px;
     	padding: 0px;
     	flex-wrap: wrap;
-	
 	}
     li {
       	overflow: hidden;
@@ -182,8 +219,16 @@ import MainLayout from "../layouts/main-layout.astro";
       	border: #e2e8f0;
 		border-style: solid;
 		padding: 0px 15px 0px 15px;
-      	margin: 0.5rem;
+      	margin: 0.6rem;
 	}
+
+	li:hover {
+		transform: scale(1.1);
+		border: #22D3EE;
+		border-style: solid;
+		border-radius: 0.75rem;
+	}
+
     .skill-svg {
         width: 25px;
         margin-right: 25px;
@@ -191,6 +236,19 @@ import MainLayout from "../layouts/main-layout.astro";
     .skill-name {
         margin-top: 15px;
     }
+
+	#pic {
+		box-shadow: 7px 10px 20px rgba(0,0,0,0.2);
+		border-radius: 10px;
+		transition: transform 0.3s ease;
+		position: relative;
+		z-index: 2;
+	}
+
+	#pic:hover {
+		transform: scale(1.05);
+		z-index: 3;
+	}
 </style>
 
 <script>
