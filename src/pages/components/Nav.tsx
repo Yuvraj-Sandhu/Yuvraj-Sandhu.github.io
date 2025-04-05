@@ -1,4 +1,3 @@
-
 import avatar from '../../../public/profile2.png'
 import {motion} from "framer-motion"
 import {useState} from "react"
@@ -47,6 +46,7 @@ const NavLinks = ({
           key={id}
           variants={isMobile ? itemMotion : itemMotionDesktop}
           href={href}
+          className="hover:text-[#00abf0] transition-colors duration-300 ease-in-out"
         >
           {name}
         </motion.a>
@@ -73,7 +73,7 @@ export default function Nav(){
                     initial={{ pathLength: 0, opacity: 0 }}
                     transition={{ delay: 1, duration: 0.75 }}
                     d="M2 2L428 1.99996"
-                    stroke="#282828"
+                    stroke="#00abf0"
                     strokeWidth="2"
                     strokeLinecap="round"
                 />
@@ -90,7 +90,7 @@ export default function Nav(){
 
             {/* title */}
             
-            <h1 className="text-2xl ">
+            <h1 className="text-2xl hover:text-[#00abf0] transition-all duration-300 ease-in-out">
                 <a href ="/">Yuvraj</a>
             </h1>
 
@@ -102,10 +102,10 @@ export default function Nav(){
                     animate="visible"
                     initial="hidden"
                     className="fixed left-0 top-0  z-40 flex h-screen
-                    w-full flex-col items-center  justify-center  gap-24 bg-white text-2xl font-bold"
+                    w-full flex-col items-center  justify-center  gap-24 bg-[#081b29] text-2xl font-bold"
                 >
                     <NavLinks
-                        className=" flex flex-col gap-24 text-lg "
+                        className=" flex flex-col gap-24 text-lg text-[#ededed]"
                         isMobile={true}
                     />
                 </motion.div>
@@ -114,7 +114,7 @@ export default function Nav(){
                 animate={{ opacity: 1, x: 0 }}
                 initial={{ opacity: 0, x: 25 }}
                 transition={{ delay: 0.35 }}
-                className="hidden xl:flex xl:items-center  xl:justify-center xl:gap-12 xl:text-lg   "
+                className="hidden xl:flex xl:items-center xl:justify-center xl:gap-12 xl:text-lg "
             >
                 <NavLinks className="flex gap-12" isMobile={false} />
             </motion.div>
@@ -130,12 +130,12 @@ export default function Nav(){
             >
                 <motion.span
                     animate={{ rotateZ: toggled ? 45 : 0, y: toggled ? 8 : 0 }}
-                    className="line-1 block h-0.5 w-8 bg-blue-400"
+                    className="line-1 block h-0.5 w-8 bg-[#00abf0]"
                 ></motion.span>
 
                 <motion.span
                     animate={{ width: toggled ? 0 : 24 }}
-                    className="line-2 block h-0.5 w-6 bg-blue-400"
+                    className="line-2 block h-0.5 w-6 bg-[#00abf0]"
                 ></motion.span>
                 <motion.span
                     animate={{
@@ -143,7 +143,7 @@ export default function Nav(){
                         y: toggled ? -8 : 0,
                         width: toggled ? 32 : 16,
                     }}
-                    className="line-3 block h-0.5 w-4 bg-blue-400"
+                    className="line-3 block h-0.5 w-4 bg-[#00abf0]"
                 ></motion.span>
             </motion.div>
 
