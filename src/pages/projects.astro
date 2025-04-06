@@ -30,7 +30,7 @@ import MainLayout from "../layouts/main-layout.astro";
                                     width="24" 
                                     height="24" 
                                     id = "button"
-                                    color="black"
+                                    color="#ededed"
                                     viewBox="0 0 24 24">
                                     <title>GitHub</title>
                                     <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5">
@@ -68,7 +68,7 @@ import MainLayout from "../layouts/main-layout.astro";
                                     width="24" 
                                     height="24" 
                                     id = "button"
-                                    color="black"
+                                    color="#ededed"
                                     viewBox="0 0 24 24">
                                     <title>GitHub</title>
                                     <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5">
@@ -106,7 +106,7 @@ import MainLayout from "../layouts/main-layout.astro";
                                     width="24" 
                                     height="24" 
                                     id = "button"
-                                    color="black"
+                                    color="#ededed"
                                     viewBox="0 0 24 24">
                                     <title>GitHub</title>
                                     <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5">
@@ -144,7 +144,7 @@ import MainLayout from "../layouts/main-layout.astro";
                                     width="24" 
                                     height="24" 
                                     id = "button"
-                                    color="black"
+                                    color="#ededed"
                                     viewBox="0 0 24 24">
                                     <title>GitHub</title>
                                     <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5">
@@ -182,7 +182,7 @@ import MainLayout from "../layouts/main-layout.astro";
                                     width="24" 
                                     height="24" 
                                     id = "button"
-                                    color="black"
+                                    color="#ededed"
                                     viewBox="0 0 24 24">
                                     <title>GitHub</title>
                                     <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5">
@@ -220,7 +220,7 @@ import MainLayout from "../layouts/main-layout.astro";
                                     width="24" 
                                     height="24" 
                                     id = "button"
-                                    color="black"
+                                    color="#ededed"
                                     viewBox="0 0 24 24">
                                     <title>GitHub</title>
                                     <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5">
@@ -302,6 +302,10 @@ import MainLayout from "../layouts/main-layout.astro";
         margin-bottom: -10px;
         bottom: 0;
         left: 5%;
+
+        @media (max-width:768px) {
+            margin-bottom: 10px;
+        }
     }
     .project-subtitle-1 {
         position: relative;
@@ -315,14 +319,15 @@ import MainLayout from "../layouts/main-layout.astro";
         right: 5%;
 
         @media (max-width: 768px) {
-            position: absolute;
+            position: relative;
             display: flex;
-            font-size: small;
+            font-size: medium;
             font-weight: medium;
             color: #00abf0;
-            margin-bottom: 0;
+            justify-content: left;
+            margin-bottom: 10px;
             bottom: 0;
-            left: 0;
+            left: 5%;
             right:auto;
         }
     }
@@ -345,7 +350,7 @@ import MainLayout from "../layouts/main-layout.astro";
 
         @media (max-width: 768px) {
             margin-bottom: 0.25rem;
-            font-size: small;
+            font-size: large;
             color: #00abf0;
             text-align: left;
         }
@@ -365,7 +370,7 @@ import MainLayout from "../layouts/main-layout.astro";
 
         @media (max-width:768px) {
             margin-bottom: 0.25rem;
-            font-size: x-large;
+            font-size: xx-large;
             font-weight: bold;
             text-align: left;
         }
@@ -379,6 +384,8 @@ import MainLayout from "../layouts/main-layout.astro";
         margin-left: 15px;
         @media (max-width: 768px) {
             text-align: left;
+            margin-right: 15px;
+            margin-left: 0px;
         }
     }
     
