@@ -44,7 +44,7 @@ import Resume from './resume.pdf'
         
         {/* socials */}
         
-        <div class="relative mx-12 my-12 flex flex-row items-center justify-center gap-24 xl:gap-36">
+        <div class="relative mx-12 my-12 flex flex-row items-center justify-center gap-12 sm:gap-24 md:gap-36 lg:gap-48">
             
             {/* Linked In */}
             <a href="https://www.linkedin.com/in/yuvraj-singh-sandhu/" target="_blank">
@@ -106,6 +106,8 @@ import Resume from './resume.pdf'
 
 
 <style>
+    h1 {
+    }
     .greetings {
         margin: 0 0 30px 4px;
         padding: 15px 18px 15px 20px;
@@ -119,25 +121,39 @@ import Resume from './resume.pdf'
 
         @media (max-width: 480px) {
             margin: 0 0 20px 2px;
+            line-height: 70px;
         }
     }
     #name {
+        display: block;
+        margin-bottom: -30px;
         font-size: clamp(45px, 9.5vw, 75px);
         
         @media (max-width:1080px) {
             font-size: clamp(45px, 8.5vw, 75px);
-            line-height: 55px;
-            
+            /* line-height: 55px; */
+        }
+
+        @media (max-width:720px) {
+            line-height: 50px;
+            margin-top: 20px;
+            margin-bottom: -10px;
+        }
+
+        @media (max-width:480px) {
+            margin-top: 0px;
         }
     }
     #role {
-        
+        display: block;
         color: #676f85;
         line-height: 0.9;
         font-size: clamp(40px, 8vw, 70px);
+        margin-bottom: 15px;
 
-        @media (max-width: 450px) {
+        @media (max-width: 480px) {
             font-size: clamp(40px, 8vw, 70px);
+            margin-top: 0px;
         }
     }
 
